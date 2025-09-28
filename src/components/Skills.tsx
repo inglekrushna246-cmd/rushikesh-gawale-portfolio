@@ -13,12 +13,11 @@ import {
 
 const Skills = () => {
   const technicalSkills = [
-    { name: "SQL", level: 90, icon: Database },
-    { name: "Excel", level: 85, icon: FileSpreadsheet },
-    { name: "Power BI", level: 80, icon: BarChart3 },
-    { name: "Python", level: 75, icon: Code },
-    { name: "R", level: 70, icon: Code },
-    { name: "Tableau", level: 75, icon: BarChart3 },
+    { name: "SQL", icon: Database },
+    { name: "Excel", icon: FileSpreadsheet },
+    { name: "Power BI", icon: BarChart3 },
+    { name: "Python", icon: Code },
+    { name: "Tableau", icon: BarChart3 },
   ];
 
   const softSkills = [
@@ -63,26 +62,12 @@ const Skills = () => {
                 const IconComponent = skill.icon;
                 return (
                   <Card key={skill.name} className="p-6 animated-bg border-border hover-lift">
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-center mb-2">
-                          <h4 className="font-semibold text-lg">{skill.name}</h4>
-                          <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div 
-                            className="bg-gradient-to-r from-primary to-accent h-2 rounded-full transition-all duration-1000 ease-out"
-                            style={{ 
-                              width: `${skill.level}%`,
-                              animationDelay: `${index * 0.2}s`
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
+                     <div className="flex items-center space-x-4">
+                       <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
+                         <IconComponent className="w-6 h-6 text-white" />
+                       </div>
+                       <h4 className="font-semibold text-lg">{skill.name}</h4>
+                     </div>
                   </Card>
                 );
               })}
