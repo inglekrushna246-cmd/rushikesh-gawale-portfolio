@@ -1,14 +1,13 @@
 import { Heart, ArrowUp } from "lucide-react";
-
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   };
-
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="py-12 px-4 bg-muted/50 border-t border-border">
+  return <footer className="py-12 px-4 bg-muted/50 border-t border-border">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Logo & Description */}
@@ -23,19 +22,12 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="text-center">
-            <p className="text-muted-foreground text-sm flex items-center justify-center">
-              © {currentYear} Made with 
-              <Heart className="w-4 h-4 mx-1 text-red-500 animate-pulse" />
-              by Rushikesh Gawale
-            </p>
+            
           </div>
 
           {/* Back to Top */}
           <div className="text-center md:text-right">
-            <button
-              onClick={scrollToTop}
-              className="inline-flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-300 group"
-            >
+            <button onClick={scrollToTop} className="inline-flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-300 group">
               <span className="text-sm">Back to Top</span>
               <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300" />
             </button>
@@ -63,34 +55,19 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex space-x-6 text-sm text-muted-foreground">
-              <a 
-                href="https://linkedin.com/in/rushikesh-gawale" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors duration-300"
-              >
+              <a href="https://linkedin.com/in/rushikesh-gawale" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300">
                 LinkedIn
               </a>
-              <a 
-                href="https://github.com/rushikesh-gawale" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors duration-300"
-              >
+              <a href="https://github.com/rushikesh-gawale" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300">
                 GitHub
               </a>
-              <a 
-                href="mailto:gawalerushikesh22@gmail.com"
-                className="hover:text-primary transition-colors duration-300"
-              >
+              <a href="mailto:gawalerushikesh22@gmail.com" className="hover:text-primary transition-colors duration-300">
                 Email
               </a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

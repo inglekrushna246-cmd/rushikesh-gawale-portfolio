@@ -1,45 +1,38 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Database, 
-  BarChart3, 
-  Code, 
-  FileSpreadsheet, 
-  Brain, 
-  MessageCircle,
-  Target,
-  Lightbulb
-} from "lucide-react";
-
+import { Database, BarChart3, Code, FileSpreadsheet, Brain, MessageCircle, Target, Lightbulb } from "lucide-react";
 const Skills = () => {
-  const technicalSkills = [
-    { name: "SQL", icon: Database },
-    { name: "Excel", icon: FileSpreadsheet },
-    { name: "Power BI", icon: BarChart3 },
-    { name: "Python", icon: Code },
-    { name: "Tableau", icon: BarChart3 },
-  ];
-
-  const softSkills = [
-    { name: "Critical Thinking", icon: Brain },
-    { name: "Problem-Solving", icon: Target },
-    { name: "Communication", icon: MessageCircle },
-    { name: "Data Storytelling", icon: Lightbulb },
-  ];
-
-  const competencies = [
-    "Data Cleaning & Preparation",
-    "Statistical Analysis", 
-    "Data Visualization",
-    "Business Intelligence",
-    "Trend Analysis",
-    "Dashboard Development",
-    "Report Generation",
-    "Data Mining"
-  ];
-
-  return (
-    <section id="skills" className="py-20 px-4">
+  const technicalSkills = [{
+    name: "SQL",
+    icon: Database
+  }, {
+    name: "Excel",
+    icon: FileSpreadsheet
+  }, {
+    name: "Power BI",
+    icon: BarChart3
+  }, {
+    name: "Python",
+    icon: Code
+  }, {
+    name: "Tableau",
+    icon: BarChart3
+  }];
+  const softSkills = [{
+    name: "Critical Thinking",
+    icon: Brain
+  }, {
+    name: "Problem-Solving",
+    icon: Target
+  }, {
+    name: "Communication",
+    icon: MessageCircle
+  }, {
+    name: "Data Storytelling",
+    icon: Lightbulb
+  }];
+  const competencies = ["Data Cleaning & Preparation", "Statistical Analysis", "Data Visualization", "Business Intelligence", "Trend Analysis", "Dashboard Development", "Report Generation", "Data Mining"];
+  return <section id="skills" className="py-20 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -59,16 +52,14 @@ const Skills = () => {
             
             <div className="grid grid-cols-2 gap-4">
               {technicalSkills.map((skill, index) => {
-                const IconComponent = skill.icon;
-                return (
-                  <Card key={skill.name} className="p-4 animated-bg border-border hover-lift text-center">
+              const IconComponent = skill.icon;
+              return <Card key={skill.name} className="p-4 animated-bg border-border hover-lift text-center">
                      <div className="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center mx-auto mb-3">
                        <IconComponent className="w-5 h-5 text-white" />
                      </div>
                      <h4 className="font-semibold text-sm">{skill.name}</h4>
-                   </Card>
-                );
-              })}
+                   </Card>;
+            })}
             </div>
           </div>
 
@@ -80,17 +71,15 @@ const Skills = () => {
                 Soft <span className="text-gradient">Skills</span>
               </h3>
               <div className="grid grid-cols-2 gap-4">
-                {softSkills.map((skill) => {
-                  const IconComponent = skill.icon;
-                  return (
-                    <Card key={skill.name} className="p-6 text-center animated-bg border-border hover-lift">
+                {softSkills.map(skill => {
+                const IconComponent = skill.icon;
+                return <Card key={skill.name} className="p-6 text-center animated-bg border-border hover-lift">
                       <div className="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
                         <IconComponent className="w-8 h-8 text-white" />
                       </div>
                       <h4 className="font-semibold text-sm">{skill.name}</h4>
-                    </Card>
-                  );
-                })}
+                    </Card>;
+              })}
               </div>
             </div>
 
@@ -101,15 +90,9 @@ const Skills = () => {
               </h3>
               <Card className="p-8 animated-bg border-border hover-lift">
                 <div className="flex flex-wrap gap-3">
-                  {competencies.map((competency) => (
-                    <Badge 
-                      key={competency} 
-                      variant="secondary" 
-                      className="text-sm py-2 px-4 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 hover:border-primary/40 transition-colors duration-300"
-                    >
+                  {competencies.map(competency => <Badge key={competency} variant="secondary" className="text-sm py-2 px-4 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 hover:border-primary/40 transition-colors duration-300">
                       {competency}
-                    </Badge>
-                  ))}
+                    </Badge>)}
                 </div>
               </Card>
             </div>
@@ -120,7 +103,7 @@ const Skills = () => {
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Data Analysis</span>
-                  <span className="text-sm font-medium">SQL, Python, R</span>
+                  <span className="text-sm font-medium">SQL, Python</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Visualization</span>
@@ -139,8 +122,6 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Skills;
