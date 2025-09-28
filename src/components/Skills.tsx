@@ -57,18 +57,16 @@ const Skills = () => {
               Technical <span className="text-gradient">Expertise</span>
             </h3>
             
-            <div className="space-y-6">
+            <div className="grid grid-cols-2 gap-4">
               {technicalSkills.map((skill, index) => {
                 const IconComponent = skill.icon;
                 return (
-                  <Card key={skill.name} className="p-6 animated-bg border-border hover-lift">
-                     <div className="flex items-center space-x-4">
-                       <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
-                         <IconComponent className="w-6 h-6 text-white" />
-                       </div>
-                       <h4 className="font-semibold text-lg">{skill.name}</h4>
+                  <Card key={skill.name} className="p-4 animated-bg border-border hover-lift text-center">
+                     <div className="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center mx-auto mb-3">
+                       <IconComponent className="w-5 h-5 text-white" />
                      </div>
-                  </Card>
+                     <h4 className="font-semibold text-sm">{skill.name}</h4>
+                   </Card>
                 );
               })}
             </div>
