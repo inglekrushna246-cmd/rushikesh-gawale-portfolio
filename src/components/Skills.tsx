@@ -83,42 +83,6 @@ const Skills = () => {
               </div>
             </div>
 
-            {/* Core Competencies */}
-            <div>
-              <h3 className="text-3xl font-bold text-center lg:text-left mb-6">
-                Core <span className="text-gradient">Competencies</span>
-              </h3>
-              <Card className="p-8 animated-bg border-border hover-lift">
-                <div className="flex flex-wrap gap-3">
-                  {competencies.map(competency => <Badge key={competency} variant="secondary" className="text-sm py-2 px-4 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 hover:border-primary/40 transition-colors duration-300">
-                      {competency}
-                    </Badge>)}
-                </div>
-              </Card>
-            </div>
-
-            {/* Tools & Technologies */}
-            <Card className="p-8 animated-bg border-border hover-lift">
-              <h4 className="text-xl font-bold mb-4 text-gradient">Tools & Technologies</h4>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Data Analysis</span>
-                  <span className="text-sm font-medium">SQL, Python</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Visualization</span>
-                  <span className="text-sm font-medium">Power BI, Tableau</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Spreadsheets</span>
-                  <span className="text-sm font-medium">Excel, Google Sheets</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Databases</span>
-                  <span className="text-sm font-medium">MySQL, PostgreSQL</span>
-                </div>
-              </div>
-            </Card>
           </div>
         </div>
       </div>
