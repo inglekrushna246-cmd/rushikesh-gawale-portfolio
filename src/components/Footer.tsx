@@ -36,36 +36,7 @@ const Footer = () => {
 
         {/* Bottom Links */}
         <div className="mt-8 pt-8 border-t border-border">
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <div className="flex space-x-6 text-sm text-muted-foreground">
-              <a href="#home" className="hover:text-primary transition-colors duration-300">
-                Home
-              </a>
-              <a href="#about" className="hover:text-primary transition-colors duration-300">
-                About
-              </a>
-              <a href="#skills" className="hover:text-primary transition-colors duration-300">
-                Skills
-              </a>
-              <a href="#projects" className="hover:text-primary transition-colors duration-300">
-                Projects
-              </a>
-              <a href="#contact" className="hover:text-primary transition-colors duration-300">
-                Contact
-              </a>
-            </div>
-            <div className="flex space-x-6 text-sm text-muted-foreground">
-              <a href="https://linkedin.com/in/rushikesh-gawale" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300">
-                LinkedIn
-              </a>
-              <a href="https://github.com/rushikesh-gawale" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300">
-                GitHub
-              </a>
-              <a href="mailto:gawalerushikesh22@gmail.com" className="hover:text-primary transition-colors duration-300">
-                Email
-              </a>
-            </div>
-          </div>
+          
         </div>
       </div>
     </footer>;

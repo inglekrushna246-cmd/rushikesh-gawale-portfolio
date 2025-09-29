@@ -75,17 +75,7 @@ const Projects = () => {
                   </Button>
                   
                   {/* Connect With Me - Horizontal */}
-                  <div className="flex gap-2 ml-auto">
-                    <Button variant="outline" size="sm">
-                      LinkedIn
-                    </Button>
-                    <Button variant="outline" size="sm">
-                      GitHub
-                    </Button>
-                    <Button variant="outline" size="sm">
-                      Instagram
-                    </Button>
-                  </div>
+                  
                 </div>
               </div>
             </Card>)}
