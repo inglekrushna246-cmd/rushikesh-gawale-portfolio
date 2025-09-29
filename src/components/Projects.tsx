@@ -107,12 +107,7 @@ const Projects = () => {
         </div>
 
         {/* Upcoming Projects */}
-        <div>
-          <h3 className="text-3xl font-bold text-center mb-12">
-            Upcoming <span className="text-gradient">Projects</span>
-          </h3>
-          
-        </div>
+        
 
         {/* Call to Action */}
         <div className="text-center mt-16">
