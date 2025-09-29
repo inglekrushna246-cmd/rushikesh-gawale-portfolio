@@ -45,81 +45,46 @@ const Projects = () => {
         {/* Featured Project */}
         <div className="mb-16">
           {projects.map(project => <Card key={project.title} className="overflow-hidden animated-bg border-border hover-lift">
-              <div className="grid lg:grid-cols-2 gap-0">
-                {/* Project Details */}
-                <div className="p-6 lg:p-8">
-                  <div className="mb-4">
-                    <Badge variant="secondary" className="bg-primary text-primary-foreground mb-3">
-                      {project.category}
-                    </Badge>
-                    <h3 className="text-2xl font-bold mb-3 text-gradient">
-                      {project.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
+              <div className="p-6 lg:p-8">
+                <div className="mb-4">
+                  <Badge variant="secondary" className="bg-primary text-primary-foreground mb-3">
+                    {project.category}
+                  </Badge>
+                  <h3 className="text-2xl font-bold mb-3 text-gradient">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
 
-                  {/* Tools Used */}
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-2">
-                      {project.tools.map(tool => <Badge key={tool} variant="outline" className="border-primary/30 text-xs">
-                          {tool}
-                        </Badge>)}
-                    </div>
+                {/* Tools Used */}
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tools.map(tool => <Badge key={tool} variant="outline" className="border-primary/30 text-xs">
+                        {tool}
+                      </Badge>)}
                   </div>
+                </div>
 
-                  {/* Action Button */}
+                {/* Action Buttons */}
+                <div className="flex gap-3">
                   <Button variant="outline" className="group">
                     <Github className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                     View Code
                   </Button>
-                </div>
-
-                {/* Contact Form & Social Links */}
-                <div className="p-6 lg:p-8 bg-muted/30">
-                  <div className="mb-6">
-                    <h3 className="text-xl font-bold mb-4">Get In Touch</h3>
-                    <form className="space-y-4">
-                      <div>
-                        <input 
-                          type="text" 
-                          placeholder="Your Name" 
-                          className="w-full px-3 py-2 text-sm rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
-                        />
-                      </div>
-                      <div>
-                        <input 
-                          type="email" 
-                          placeholder="Your Email" 
-                          className="w-full px-3 py-2 text-sm rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
-                        />
-                      </div>
-                      <div>
-                        <textarea 
-                          placeholder="Your Message" 
-                          rows={3}
-                          className="w-full px-3 py-2 text-sm rounded-md border border-input bg-background resize-none focus:outline-none focus:ring-2 focus:ring-ring"
-                        />
-                      </div>
-                      <Button className="w-full">Send Message</Button>
-                    </form>
-                  </div>
-
-                  {/* Connect With Me */}
-                  <div>
-                    <h4 className="font-semibold mb-3">Connect With Me</h4>
-                    <div className="flex gap-3">
-                      <Button variant="outline" size="sm" className="flex-1">
-                        LinkedIn
-                      </Button>
-                      <Button variant="outline" size="sm" className="flex-1">
-                        GitHub
-                      </Button>
-                      <Button variant="outline" size="sm" className="flex-1">
-                        Instagram
-                      </Button>
-                    </div>
+                  
+                  {/* Connect With Me - Horizontal */}
+                  <div className="flex gap-2 ml-auto">
+                    <Button variant="outline" size="sm">
+                      LinkedIn
+                    </Button>
+                    <Button variant="outline" size="sm">
+                      GitHub
+                    </Button>
+                    <Button variant="outline" size="sm">
+                      Instagram
+                    </Button>
                   </div>
                 </div>
               </div>
