@@ -46,60 +46,80 @@ const Projects = () => {
         <div className="mb-16">
           {projects.map(project => <Card key={project.title} className="overflow-hidden animated-bg border-border hover-lift">
               <div className="grid lg:grid-cols-2 gap-0">
-                {/* Project Image */}
-                <div className="relative overflow-hidden">
-                  <img src={project.image} alt={project.title} className="w-full h-64 lg:h-full object-cover transition-transform duration-500 hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
-                  <div className="absolute top-4 left-4">
-                    <Badge variant="secondary" className="bg-primary text-primary-foreground">
+                {/* Project Details */}
+                <div className="p-6 lg:p-8">
+                  <div className="mb-4">
+                    <Badge variant="secondary" className="bg-primary text-primary-foreground mb-3">
                       {project.category}
                     </Badge>
+                    <h3 className="text-2xl font-bold mb-3 text-gradient">
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                      {project.description}
+                    </p>
                   </div>
-                </div>
-
-                {/* Project Details */}
-                <div className="p-8 lg:p-12">
-                  <h3 className="text-3xl font-bold mb-4 text-gradient">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
 
                   {/* Tools Used */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-3 flex items-center">
-                      <Database className="w-4 h-4 mr-2 text-primary" />
-                      Tools Used
-                    </h4>
+                  <div className="mb-4">
                     <div className="flex flex-wrap gap-2">
-                      {project.tools.map(tool => <Badge key={tool} variant="outline" className="border-primary/30">
+                      {project.tools.map(tool => <Badge key={tool} variant="outline" className="border-primary/30 text-xs">
                           {tool}
                         </Badge>)}
                     </div>
                   </div>
 
-                  {/* Key Features */}
-                  <div className="mb-8">
-                    <h4 className="font-semibold mb-3 flex items-center">
-                      <BarChart3 className="w-4 h-4 mr-2 text-secondary" />
-                      Key Features
-                    </h4>
-                    <ul className="space-y-2">
-                      {project.features.map((feature, index) => <li key={index} className="flex items-center text-sm text-muted-foreground">
-                          <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                          {feature}
-                        </li>)}
-                    </ul>
+                  {/* Action Button */}
+                  <Button variant="outline" className="group">
+                    <Github className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                    View Code
+                  </Button>
+                </div>
+
+                {/* Contact Form & Social Links */}
+                <div className="p-6 lg:p-8 bg-muted/30">
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold mb-4">Get In Touch</h3>
+                    <form className="space-y-4">
+                      <div>
+                        <input 
+                          type="text" 
+                          placeholder="Your Name" 
+                          className="w-full px-3 py-2 text-sm rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
+                        />
+                      </div>
+                      <div>
+                        <input 
+                          type="email" 
+                          placeholder="Your Email" 
+                          className="w-full px-3 py-2 text-sm rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
+                        />
+                      </div>
+                      <div>
+                        <textarea 
+                          placeholder="Your Message" 
+                          rows={3}
+                          className="w-full px-3 py-2 text-sm rounded-md border border-input bg-background resize-none focus:outline-none focus:ring-2 focus:ring-ring"
+                        />
+                      </div>
+                      <Button className="w-full">Send Message</Button>
+                    </form>
                   </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    
-                    <Button variant="outline" className="group">
-                      <Github className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-                      View Code
-                    </Button>
+                  {/* Connect With Me */}
+                  <div>
+                    <h4 className="font-semibold mb-3">Connect With Me</h4>
+                    <div className="flex gap-3">
+                      <Button variant="outline" size="sm" className="flex-1">
+                        LinkedIn
+                      </Button>
+                      <Button variant="outline" size="sm" className="flex-1">
+                        GitHub
+                      </Button>
+                      <Button variant="outline" size="sm" className="flex-1">
+                        Instagram
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
