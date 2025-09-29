@@ -15,20 +15,21 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left space-y-8 animate-fade-in-up">
             <div className="space-y-4">
-              <h2 className="text-lg text-secondary font-medium">
-                Hello, I'm Rushikesh
+              <h2 className="text-lg text-accent font-medium">
+                Rushikesh Gawale
               </h2>
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="text-gradient">Data Analyst</span>
+                <span className="text-foreground">Transforming </span>
+                <span className="text-gradient">Raw Data</span>
                 <br />
-                <span className="text-foreground">& Visualization</span>
+                <span className="text-foreground">into Measurable</span>
                 <br />
-                <span className="text-foreground">Expert</span>
+                <span className="text-accent">Business Impact</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Passionate data enthusiast with hands-on experience in transforming 
-                raw data into actionable business insights. Skilled in SQL, Power BI, 
-                and Python, ready to tackle new challenges in the tech world.
+                Data Analyst specializing in SQL, Power BI, and Python. I turn complex 
+                datasets into clear visualizations and actionable insights that drive 
+                strategic business decisions.
               </p>
             </div>
 
@@ -93,10 +94,10 @@ const Hero = () => {
                 />
               </div>
               {/* Floating elements */}
-              <div className="absolute -top-8 -right-8 w-20 h-20 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold animate-glow">
+              <div className="absolute -top-8 -right-8 w-20 h-20 bg-accent rounded-full flex items-center justify-center text-white font-bold animate-glow shadow-[0_0_30px_hsl(188,100%,50%)]">
                 SQL
               </div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center text-white font-bold animate-pulse">
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold animate-pulse">
                 BI
               </div>
             </div>

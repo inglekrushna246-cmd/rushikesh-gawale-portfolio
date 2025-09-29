@@ -11,9 +11,17 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold text-gradient">
-            Rushikesh Gawale
-          </div>
+          <button 
+            onClick={() => scrollToSection("home")}
+            className="flex items-center gap-3 hover-lift cursor-pointer group"
+          >
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-[0_0_20px_hsl(188,100%,50%)] transition-all duration-300">
+              <span className="text-white font-bold text-xl">RG</span>
+            </div>
+            <span className="text-xl font-bold text-gradient">
+              Rushikesh Gawale
+            </span>
+          </button>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -39,8 +47,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
-            <Button variant="hero" size="sm" onClick={() => scrollToSection("contact")}>
-              Let's Talk
+            <Button 
+              onClick={() => scrollToSection("contact")}
+              className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-[0_0_20px_hsl(188,100%,50%)] transition-all duration-300"
+            >
+              Let's Connect
             </Button>
           </div>
         </div>
