@@ -48,8 +48,16 @@ const Hero = () => {
                 variant="glass"
                 size="lg"
                 className="group"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/resume.pdf';
+                  link.download = 'Rushikesh_Gawale_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
               >
-                Download CV
+                Download Resume
                 <Download className="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform duration-300" />
               </Button>
             </div>
