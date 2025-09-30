@@ -12,11 +12,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Logo & Description */}
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold text-gradient mb-3">
-              Rushikesh Gawale
-            </h3>
             <p className="text-muted-foreground text-sm">
-              Data Analyst & Visualization Expert
+              © 2024 Rushikesh Gawale.
             </p>
           </div>
 

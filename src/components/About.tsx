@@ -87,11 +87,11 @@ const About = () => {
                   <h3 className="text-2xl font-bold mb-4 text-gradient">Core Values</h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full"></div>
                       <span>Data-driven decision making</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full"></div>
                       <span>Continuous learning and growth</span>
                     </li>
                     <li className="flex items-center space-x-2">
@@ -99,7 +99,7 @@ const About = () => {
                       <span>Clear communication of insights</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <div className="w-2 h-2 bg-accent rounded-full"></div>
                       <span>Innovation in problem-solving</span>
                     </li>
                   </ul>

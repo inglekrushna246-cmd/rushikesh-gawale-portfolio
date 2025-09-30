@@ -68,7 +68,7 @@ const Skills = () => {
                       className="p-6 animated-bg border-border hover-lift group"
                     >
                       <div className="flex items-start gap-4 mb-4">
-                        <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0 group-hover:shadow-[0_0_20px_hsl(188,100%,50%)] transition-all duration-300">
+                        <div className="w-14 h-14 bg-accent rounded-lg flex items-center justify-center flex-shrink-0 group-hover:shadow-[0_0_20px_hsl(188,100%,50%)] transition-all duration-300">
                           <IconComponent className="w-7 h-7 text-white" />
                         </div>
                         <div>
