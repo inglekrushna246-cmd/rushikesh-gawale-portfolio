@@ -73,7 +73,7 @@ const Hero = () => {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/rushikesh-gawale"
+                href="https://github.com/gawalerushikesh22-max"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-lift"
@@ -81,7 +81,7 @@ const Hero = () => {
                 GitHub
               </a>
               <a
-                href="https://instagram.com/rushikesh.gawale"
+                href="https://www.instagram.com/rushikesh_gawale_18/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-lift"
