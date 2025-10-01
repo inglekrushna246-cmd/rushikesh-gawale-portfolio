@@ -30,14 +30,14 @@ const Contact = () => {
   }, {
     icon: Github,
     name: "GitHub",
-    handle: "@rushikesh-gawale",
-    link: "https://github.com/rushikesh-gawale",
+    handle: "@gawalerushikesh22-max",
+    link: "https://github.com/gawalerushikesh22-max",
     color: "hover:text-gray-400"
   }, {
     icon: Instagram,
     name: "Instagram",
-    handle: "@rushikesh.gawale",
-    link: "https://instagram.com/rushikesh.gawale",
+    handle: "@rushikesh_gawale_18",
+    link: "https://www.instagram.com/rushikesh_gawale_18/?hl=en",
     color: "hover:text-pink-500"
   }];
   return <section id="contact" className="py-20 px-4">
