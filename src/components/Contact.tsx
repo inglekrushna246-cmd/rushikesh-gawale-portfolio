@@ -1,7 +1,51 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Linkedin, Github, Instagram, Send, MessageCircle } from "lucide-react";
+import { useState, FormEvent } from "react";
+import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        "service_syy8sop",
+        "template_dyaknhp",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "1eV66RJAb-4IhCIg-"
+      );
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const contactInfo = [{
     icon: Mail,
     label: "Email",
@@ -116,11 +160,14 @@ const Contact = () => {
                 Let's Create Something <span className="text-gradient">Amazing</span>
               </h3>
               
-              <form className="space-y-4 max-w-2xl mx-auto">
+              <form onSubmit={handleSubmit} className="space-y-4 max-w-2xl mx-auto">
                 <div>
                   <input 
                     type="text" 
                     placeholder="Your Name" 
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
                   />
                 </div>
@@ -128,6 +175,9 @@ const Contact = () => {
                   <input 
                     type="email" 
                     placeholder="Your Email" 
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
                   />
                 </div>
@@ -135,11 +185,14 @@ const Contact = () => {
                   <textarea 
                     placeholder="Your Message" 
                     rows={5}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
                     className="w-full px-4 py-3 rounded-md border border-input bg-background resize-none focus:outline-none focus:ring-2 focus:ring-ring"
                   />
                 </div>
-                <Button variant="hero" size="lg" className="w-full group">
-                  Send Message
+                <Button type="submit" variant="hero" size="lg" className="w-full group" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Message"}
                   <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </form>
